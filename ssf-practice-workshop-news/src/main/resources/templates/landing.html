@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for news</title>
+</head>
+<body>
+    <form th:action="@{/news/searchresult}">
+        <table>
+            <tr>
+                <td>Category</td>
+                <td>Country</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="category">
+                        <option th:each="i : ${categories}" th:value="${i}"><span th:text="${i}"></span></option>
+                    </select>
+                </td>
+                <td>
+                    <select name="country">
+                        <option th:each="i : ${countries}" th:value="*{i.code}"><span th:text="*{i.name}"></spanth:text></span></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Show</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="show">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="50">50</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

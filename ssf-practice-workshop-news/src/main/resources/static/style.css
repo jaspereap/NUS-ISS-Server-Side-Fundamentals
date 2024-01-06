@@ -1,0 +1,15 @@
+img {
+    max-width: 50%;
+    height: auto;
+}
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.article-container {
+    border: 1px solid #ccc; /* Border */
+    padding: 15px; /* Padding */
+    margin-bottom: 20px; /* Margin to create space between articles */
+    background-color: #fff; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow for a slight elevation effect */
+}

@@ -1,0 +1,4 @@
+name=jasper
+email=jaspereap@gmail.com
+dob=1997-02-22
+phone=90696176

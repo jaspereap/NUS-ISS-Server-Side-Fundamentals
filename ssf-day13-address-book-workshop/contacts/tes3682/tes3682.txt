@@ -1,0 +1,4 @@
+name=test
+email=test@gmail.com
+dob=1997-11-11
+phone=9099283

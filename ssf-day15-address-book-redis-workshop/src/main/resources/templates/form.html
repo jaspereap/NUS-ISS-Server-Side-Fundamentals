@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>New contact</h1>
+    <form action="/contact" method="POST" data-th-object="${contact}">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" th:field="*{name}"></td>
+                <td data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}" data-th-errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="email" th:field="*{email}"></td>
+                <td data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}" data-th-errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Phone Number: </td>
+                <td><input type="number" th:field="*{phone}"></td>
+                <td data-th-if="${#fields.hasErrors('phone')}" data-th-errors="*{phone}" data-th-errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Birthday: </td>
+                <td><input type="date" th:field="*{dob}"></td>
+                <td data-th-if="${#fields.hasErrors('dob')}" data-th-errors="*{dob}" data-th-errorclass="error"></td>
+            </tr>
+        </table>
+
+        <button type="submit">Create</button>
+    </form>
+
+    <a th:href="@{/contact}">View All Contacts</a>
+
+    <div th:text="${message}"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Shopping Cart</h2>
+    <form method="POST">
+        <table>
+            <tr>
+                <td>Item:</td>
+                <td>
+                    <input type="text" name="name" size="30" id="name" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>Quantity:</td>
+                <td>
+                    <input type="number" name="quantity" min="1" size="30" value="" id="quantity">
+                    </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" formaction="/cart/checkout"> Checkout </button>
+                    <button type="submit" formaction="/cart"> Add to Cart </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div th:text="${@environment.getProperty('server.port')}"></div>
+
+    <h2>Your cart</h2>
+    <table>
+        <tr>
+            <td>Item</td>
+            <td>Quantity</td>
+        </tr>
+        <!-- <span th:text="${cart.get(0).getName()}"></span> -->
+        <tr data-th-each="item : ${cart}">
+            <td data-th-text="${item.getName()}"></td>
+            <td data-th-text="${item.getQuantity()}"></td>
+        </tr>
+    </table>
+</body>
+</html>

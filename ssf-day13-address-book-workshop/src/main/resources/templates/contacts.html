@@ -1,0 +1,22 @@
+<!-- For displaying a list of contacts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Add more contacts</a>
+    <table>
+        <th>Name</th>
+        <th>Contact Detail</th>
+        <tr th:each="contact : ${contactList}">
+            <td th:text="${contact.name}"></td>
+            <!-- /contacts/{id} -->
+            <td th:text="${contact.getHexString}"></td>
+            <td><a th:href="@{'/contact/' + ${contact.getHexString}}">Link</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- action="/users/user" -->
+    <form method="POST" th:action="@{/users/user}">
+        <input placeholder="name" type="text" name="name">
+        <br />
+        <input placeholder="email" type="email" name="email">
+        <br />
+        <input placeholder="tel" type="tel" name="phone">
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

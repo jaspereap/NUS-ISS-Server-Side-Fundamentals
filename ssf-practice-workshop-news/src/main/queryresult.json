@@ -1,0 +1,33 @@
+{
+    "status": "ok",
+    "totalResults": 36,
+    "articles": [
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "PAUL J. WEBER Associated Press",
+            "title": "Texas Supreme Court pauses lower court's order allowing pregnant woman to have an abortion - ABC News",
+            "description": "The Texas Supreme Court has put on hold a judge’s ruling that approved an abortion for a pregnant woman whose fetus has a fatal diagnosis",
+            "url": "https://abcnews.go.com/US/wireStory/texas-supreme-court-pauses-lower-courts-order-allowing-105515102",
+            "urlToImage": "https://i.abcnewsfe.com/a/10d247b2-63d5-4e81-b7cb-d56b7a0e3ff8/wirestory_10767891a475e7ce2c82b1404450908a_16x9.jpg?w=992",
+            "publishedAt": "2023-12-10T02:32:55Z",
+            "content": "AUSTIN, Texas -- The Texas Supreme Court on Friday night put on hold a judge's ruling that approved an abortion for a pregnant woman whose fetus has a fatal diagnosis, throwing into limbo an unpreced… [+2818 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "The Philadelphia Inquirer"
+            },
+            "author": "Susan Snyder, Joseph N. DiStefano, Rob Tornoe, Michelle Myers",
+            "title": "Penn President Liz Magill resigns after facing intense controversy; chair of school's board of trustees also steps down - The Philadelphia Inquirer",
+            "description": "Magill resigned amid growing bipartisan backlash against her Capitol Hill testimony on antisemitism earlier this week and a semester marked by protests and controversy.",
+            "url": "https://www.inquirer.com/education/live/liz-magill-university-pennsylvania-penn-resign-antisemitism-testimony-20231209.html",
+            "urlToImage": "https://www.inquirer.com/resizer/Y2ZTN1shEJusBnOmep9ypAhvdWY=/760x507/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/pmn/OFWAUOMTT5F3TG622I53GIUF4U.jpg",
+            "publishedAt": "2023-12-10T02:30:28Z",
+            "content": null
+        }
+    ]
+}
+        

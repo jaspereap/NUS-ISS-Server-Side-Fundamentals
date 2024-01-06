@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <button value="Back" type="Button" onclick="history.go(-1);">Go back</button>
+    <div th:text="${message}"></div>
+
+    <div th:each="article : ${articles}" class="article-container">
+
+        <h2 th:text="*{article.title}"></h2>
+
+        <div th:if="${article.imageUrl != 'null'}">
+            <img th:src="@{*{article.imageUrl}}" alt="" width="800" height="600">
+        </div>
+
+        <h3 th:if="${article.author != 'null'}" th:text="*{article.author}"></h3>
+
+        <h4>
+            <div th:if="${article.description != 'null'}" th:text="*{article.description}"></div>
+        </h4>
+
+        <h4>
+            <div th:if="${article.timestamp != 'null'}" th:text="*{article.timestamp}"></div>
+            <a th:if="${article.articleUrl != 'null'}" th:href="@{*{article.articleUrl}}">Go to article</a>
+        </h4>
+
+    </div>
+</body>
+</html>

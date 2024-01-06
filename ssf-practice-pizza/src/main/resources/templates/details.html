@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panucci's Pizza</title>
+    <link rel="stylesheet" th:href=@{../styles.css}>
+</head>
+<body>
+    
+    <h2>Order Delivery Details</h2>
+    <form th:action="@{/pizza/order}" th:method="post" th:object="${delivery}">
+
+        <div th:object="${order}" hidden>
+            <input type="text" name="pizza" th:value="*{pizza}">
+            <input type="text" name="size" th:value="*{size}">
+            <input type="text" name="quantity" th:value="*{quantity}">
+        </div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="name" th:field="*{name}"></td>
+                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><input type="text" name="address" th:field="*{address}"></td>
+                <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}" th:errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Phone: </td>
+                <td><input type="tel" name="phone" th:field="*{phone}"></td>
+                <td th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" th:errorclass="error"></td>
+            </tr>
+            <tr>
+                <td>Rush: </td>
+                <td><input type="checkbox" name="rush" th:field="*{rush}"></td>
+            </tr>
+            <tr>
+                <td>Comments: </td>
+                <td><input type="text" name="comments" th:field="*{comments}"></td>
+            </tr>
+            <tr>
+                <td><button type="button" formaction="/" formmethod="get">Cancel Order</button></td>
+                <td><button type="submit">Place Order</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

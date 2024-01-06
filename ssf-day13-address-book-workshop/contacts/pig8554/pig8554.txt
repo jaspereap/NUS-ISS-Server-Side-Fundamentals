@@ -1,0 +1,4 @@
+name=piggy
+email=piggy@pig.com
+dob=1991-11-11
+phone=1234567

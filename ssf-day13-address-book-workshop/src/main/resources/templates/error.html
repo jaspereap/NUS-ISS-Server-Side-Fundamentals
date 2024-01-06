@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+</head>
+<body>
+    <h1>An error has occurred.</h1>
+    <h3 th:text="${error}"></h3>
+
+    <p th:text="${#dates.createNow()}"></p>
+
+    <table>
+        <tr>
+            <td th:text="${status}"></td>
+        </tr>
+        <tr>
+            <td th:text="${path}"></td>
+        </tr>
+    </table>
+</body>
+</html>

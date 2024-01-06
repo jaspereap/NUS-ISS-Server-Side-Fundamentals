@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+</head>
+<body>
+    <h1>Search For Books</h1>
+    <form th:action="@{/process/searchBook}" method="POST">
+        <table>
+            <tr>
+                <td>Search by Author</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="author"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Search</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

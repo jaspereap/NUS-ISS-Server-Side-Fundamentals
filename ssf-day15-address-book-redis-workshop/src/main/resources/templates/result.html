@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><a href="/">Add more contacts</a></div>
+    <div><a href="/contact">View all contacts</a></div>
+    <h1>Your Contact</h1>
+    <div th:object="${contact}">
+        <table>
+            <tr>
+                <td th:text="*{name}"></td>
+            </tr>
+            <tr>
+                <td th:text="*{email}"></td>
+            </tr>
+            <tr>
+                <td th:text="*{phone}"></td>
+            </tr>
+            <tr>
+                <td th:text="*{dob}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

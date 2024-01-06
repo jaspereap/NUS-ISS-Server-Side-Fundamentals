@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panucci's Pizza</title>
+    <link rel="stylesheet" th:href=@{../styles.css}>
+</head>
+<body>
+    <h2>Delivery Details</h2>
+    <table th:object="${orderConfirm}">
+        <tr>
+            <td>Order Number: </td>
+            <td th:text="*{orderId}"></td>
+        </tr>
+        <tr>
+            <td>Your order will be delivered to </td>
+            <td th:text="*{address}"></td>
+        </tr>
+        <tr>
+            <td>Pizza cost: </td>
+            <td th:if="*{rush}" th:text="'$' + *{total - 2}"></td>
+            <td th:unless="*{rush}" th:text="'$' + *{total}"></td>
+        </tr>
+        <tr th:if="*{rush}">
+            <td>Rush:</td>
+            <td>$2</td>
+        </tr>
+        <tr>
+            <td>Total Cost: </td>
+            <td th:text="'$' + *{total}"></td>
+        </tr>
+    </table>
+    <div>
+        Track your <span><a th:href="@{'/order/' + ${orderConfirm.orderId}}">Order</a></span>
+    </div>
+    
+</body>
+</html>

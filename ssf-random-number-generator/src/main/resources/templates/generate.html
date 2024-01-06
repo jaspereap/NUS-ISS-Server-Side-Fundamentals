@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h1>How many numbers do you want to generate?</h1>
+    <!-- <div data-th-text="${generateObj.getVal()}"></div> -->
+    
+    <!-- th:object retrieves initialized 'Generate' class by /random/show -->
+    <form 
+        th:action="@{/random/generate}" method="GET" th:object="${generateObject}">
+
+        <input type="text" th:field="*{val}">
+        <input type="submit" value="Generate">
+    </form>
+</body>
+</html>
